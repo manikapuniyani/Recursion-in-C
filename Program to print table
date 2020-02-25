@@ -1,0 +1,20 @@
+#include<stdio.h>
+int table(int a,int i);
+int main()
+{ int a,l,m,i;
+printf("Enter the number");
+scanf("%d",&a);
+for(i=1;i<=10;i++)
+{
+m=table(a,i);
+printf("\n%d",m);
+}
+}
+int table(int a,int i)
+{ if(i==1)
+{ return a;
+}
+else
+{return (a+table(a,i-1));
+}
+}
