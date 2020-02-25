@@ -1,0 +1,15 @@
+#include<stdio.h>
+int dec2bi(int a);
+int main()
+{ int a,m;
+printf("Enter the number");
+scanf("%d",&a);
+m=dec2bi(a);
+printf("%d",m);
+}
+int dec2bi(int a)
+{ if(a==1)
+return 1;
+else
+return ( a%2 + 10*dec2bi(a/2));
+}
